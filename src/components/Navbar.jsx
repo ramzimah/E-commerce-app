@@ -3,14 +3,17 @@ import styled from "styled-components";
 import SearchIcon from "@mui/icons-material/Search";
 import { Badge } from "@mui/material";
 import { ShoppingCartOutlined } from "@mui/icons-material";
+import { mobile } from "../responsive";
 const Container = styled.div`
   height: 60px;
+  ${mobile({ height: "50px" })}
 `;
 const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  ${mobile({ padding: "10px 0px" })}
 `;
 const Left = styled.div`
   flex: 1;
@@ -21,6 +24,7 @@ const Left = styled.div`
 const Language = styled.span`
   font-size: 14px;
   cursor: pointer;
+  ${mobile({ display: "none" })}
 `;
 const SearchContainer = styled.div`
   border: 0.5px solid lightgray;
@@ -38,6 +42,7 @@ const Center = styled.div`
 `;
 const Logo = styled.h1`
   font-weight: bold;
+  ${mobile({ font-size: "24px" })}
 `;
 const Right = styled.div`
   flex: 1;
@@ -59,7 +64,8 @@ const Navbar = () => {
           {" "}
           <Language>EN</Language>
           <SearchContainer>
-            <Input /> <SearchIcon style={{ color: "gray", fontSize: 16 }} />
+            <Input placeholder="Search" />{" "}
+            <SearchIcon style={{ color: "gray", fontSize: 16 }} />
           </SearchContainer>{" "}
         </Left>
         <Center>
