@@ -1,16 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
-import Products from "../components/Products";
 import Footer from "../components/Footer";
 import Announcement from "../components/Announcement";
 import Newsletter from "../components/Newsletter";
 import { Add, Remove } from "@mui/icons-material";
+import { mobile } from "../responsive";
 
 const Container = styled.div``;
 const Wrapper = styled.div`
   padding: 50px;
   display: flex;
+  ${mobile({ padding: "10px", flexDirection: "column" })}
 `;
 const ImgContainer = styled.div`
   flex: 1;
@@ -19,10 +20,12 @@ const Image = styled.img`
   width: 100%;
   height: 90vh;
   object-fit: cover;
+  ${mobile({ height: "40vh" })}
 `;
 const InfoContainer = styled.div`
   flex: 1;
   padding: 0px 50px;
+  ${mobile({ padding: " 10px" })}
 `;
 const Title = styled.h1`
   font-weight: 200;
@@ -40,6 +43,7 @@ const FilterContainer = styled.div`
 
   display: flex;
   justify-content: space-between;
+  ${mobile({ width: "100%" })}
 `;
 
 const FilterTitle = styled.span`
@@ -73,6 +77,7 @@ const AddContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 50%;
+  ${mobile({ width: "100%" })}
 `;
 const Amount = styled.span`
   width: 30px;
